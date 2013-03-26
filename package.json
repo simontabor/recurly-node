@@ -1,5 +1,5 @@
 {
-  "name": "recurly-node",
+  "name": "recurly",
   "version": "0.0.0",
   "description": "Recurly API handler in node",
   "main": "lib/recurly.js",
