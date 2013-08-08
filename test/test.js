@@ -4,7 +4,6 @@ var recurly = new Recurly(process.env.KEY);
 
 
 describe("Account", function(){
-
   var user = new recurly.account(process.env.ACCOUNT || 1);
 
   it("instantiates", function(done){
@@ -70,3 +69,25 @@ describe("Account", function(){
 
 
 });
+
+
+
+describe("Transaction", function(){
+
+  var trans = new recurly.transaction(process.env.ACCOUNT || 1);
+
+  it("instantiates", function(done){
+    trans.should.be.instanceOf(recurly.transaction);
+    done();
+  });
+
+  it("can get all transactions", function(done) {
+    trans.getAll(function(err, transactions) {
+      done();
+    });
+  });
+
+
+
+});
+
